@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Welcome to Jeff's Blog"
-date:   2019-10-25 12:00:10 -0700
+date:   2019-11-02 12:00:10 -0700
 categories: jekyll update
 ---
 

@@ -14,6 +14,6 @@ a link to my javascript file.  <script src= "login-page.js"> In this file I had 
 javascipt for my page which currently I'm working on a login webpage. I included a 
 button that allows the user to enter into a textbox a name and a password. This is done
 from the main page by <button onclick="myfunction()">Submit</button>. With this your
-info is submitted and handled by the javascript. 
+info is submitted and handled by the javascript.  
 while the page is at https://www.lv426sitea.com it maybe down since it is a bit 
 pricey to always have it on. So as of now it is "On by  request". 

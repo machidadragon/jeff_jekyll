@@ -1,0 +1,28 @@
+
+<HTML>
+
+<HEAD>
+
+<TITLE>Your Title Here</TITLE>
+<link rel="stylesheet" type="text/css" href="page2.css">
+</HEAD>
+
+<BODY BGCOLOR="555555">
+
+<HR>                                                                                                                   $
+
+
+<H1>Welcome to Skynet Access Page </H1>
+<h2> You are now logged onto Skynet Server, No unauthorized use.</h2>
+<br>
+<br>
+<h2> Administration can add users to database, Please add name and password" </h2>
+
+<form action="/page3.php">  <label for="fname">Name:</label><br>                                                                                    <input type="text" id="fname" name="fname" value=""><br>
+  <label for="lname">Password:</label><br>
+  <input type="text" id="lname" name="lname" value=""><br><br>
+  <input type="submit" value="Submit">
+</form>
+</BODY>
+
+</HTML>

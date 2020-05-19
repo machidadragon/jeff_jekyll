@@ -1,0 +1,44 @@
+ 
+//<?php
+//
+//echo "<h2>Name " . $_GET["name"] . "</h2>";
+//?>
+<HTML>
+
+<HEAD>
+
+<TITLE>ResultsPage</TITLE>
+<link rel="stylesheet" type="text/css" href="page2.css">
+</HEAD>
+
+<BODY BGCOLOR="555555">
+
+<HR>                                                                          $$<?php
+$name = $_GET["data"];
+$name = trim($name);
+$pass = $_GET["data2"];
+$pass = trim($pass);
+//echo $name;
+//echo $pass;   
+define('DB_SERVER', 'lv426db.ccop1vv8dp8o.us-west-1.rds.amazonaws.com');
+define('DB_USERNAME', 'root');
+define('DB_PASSWORD', 'therocks');
+define('DB_DATABASE', 'lv426db');
+$conn = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+$sql = "INSERT INTO Skynet (name, password)
+VALUES ('$name', '$pass')";
+
+if ($conn->query($sql) === TRUE) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+/////////////////////////////////////////////////                              
+$conn->close()
+
+
+

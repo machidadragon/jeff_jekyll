@@ -1,0 +1,91 @@
+
+<HTML>
+<HEAD>                                                                         <link rel="stylesheet" type="text/css" href="page2.css">                      $</HEAD>
+<BODY>
+<a href="page2.php">Go back to User Adds and Deletes</a>
+<hr>
+<br>
+<h1>Welcome to Skynet Access Page </h1>
+<br>                                                                           <hr>
+<div class="YOU">
+<h2> You are now logged onto Skynet Server, No unauthorized use.</h2>
+</div>
+<div class="list">
+<h2> List of Users and Passwords </h2>
+</div>
+<h2> Update a Current Record in Skynet </h2>
+<form id="frm1" action="/page5.php">
+  current name: <input type="text" name="name" value=" "><br>
+  current password: <input type="text" name="password" value=" "><br>
+  Updated name: <input type="text" name="namesubmit" value=" "><br>
+  Updated password: <input type="text" name="passwordsubmit" value=" "><br>
+  <input type="submit" value="Submit">
+</form>
+
+
+</BODY>                                                                        <BODY BGCOLOR="555555">                                                        </HTML>
+<?php
+//$val = "Terminator";
+//echo json_encode($val);
+echo "<br>";
+//echo json_encode($ar);
+?>                                                                          
+  $<?php
+//$val = "Terminator";
+//echo json_encode($val);
+echo "<br>";
+//echo json_encode($ar);
+?>                                                                            $<?php
+define('DB_SERVER', 'lv426db.ccop1vv8dp8o.us-west-1.rds.amazonaws.com');       define('DB_USERNAME', 'root');
+define('DB_PASSWORD', 'therocks');
+define('DB_DATABASE', 'lv426db');
+$conn = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+////////////////////////////////////////////////////
+$sql = "SELECT name, password FROM Skynet";
+$result = $conn->query($sql);                                                 $echo " <br> ";
+$value = array(50);
+echo " <br> ";                                                                 echo "<table border='1'>
+<tr>
+<th>Name </th>                                                                 <th>Password </th>                                                             </tr>";
+while($row = mysqli_fetch_array($result))
+{
+echo "<tr>";
+echo "<td>" . $row['name'] . "</td>";
+$values[] = $row['name'];
+echo "<td>" . $row['password'] . "</td>";                                      
+echo "</tr>";
+}                                                                              
+echo "</table>";
+$num = count($values);
+//echo $values[1];
+echo " <br> ";
+echo " <br> ";
+
+///////////////PHPCODETOPRINTARRAY////////////////////
+//foreach($values as $value){
+//print "  ". ($value);                                                        //this loop loops through the array and prints values
+//}
+                                                                               
+
+                                                                               $conn->close();                                                                ////////////////////
+?>
+
+<script type="text/javascript">
+var jsvalues = <?php echo json_encode($values); ?>
+//document.write(jsvalues);
+function myFunction() {   
+ $name = name;                                                                  $pass = password;                                                             // document.write($name, $pass);
+//var i;
+//for (i = 0; i < jsvalues.length; i++) {
+//  if (jsvalues[i] == $name) {
+//  document.write("MAtch Found, Now you enter new name and password");
+
+//}
+//}
+//}
+// pass PHP array variable declared above to JavaScript variable               //and print array
+
+}                                                                              </script>
